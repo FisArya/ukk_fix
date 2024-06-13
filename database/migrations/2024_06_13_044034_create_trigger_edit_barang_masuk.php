@@ -1,24 +1,17 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
-class CreateTriggerBarangMasuk extends Migration
+return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up()
     {
-        // Trigger untuk AFTER INSERT
-        DB::unprepared('
-        CREATE TRIGGER barang_up_stokplus 
-        AFTER INSERT ON barangmasuk
-        FOR EACH ROW
-        BEGIN
-            UPDATE barang 
-            SET barang.stok = barang.stok + NEW.qty_masuk 
-            WHERE barang.id = NEW.barang_id;
-        END
-        ');
-
+      
         // Trigger untuk AFTER UPDATE
         DB::unprepared('
         CREATE TRIGGER barang_up_stokupdate 
@@ -41,7 +34,6 @@ class CreateTriggerBarangMasuk extends Migration
 
     public function down()
     {
-        DB::unprepared('DROP TRIGGER IF EXISTS barang_up_stokplus');
         DB::unprepared('DROP TRIGGER IF EXISTS barang_up_stokupdate');
     }
-}
+};

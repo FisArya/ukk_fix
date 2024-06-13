@@ -40,7 +40,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">JOKoding</div>
+                <div class="sidebar-brand-text mx-3">FISCODING</div>
             </a>
 
             <!-- Divider -->
@@ -400,7 +400,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Jovanka Arya</span>
+                        <span>Copyright &copy; Nafis Arya</span>
                         <!-- <div id="targetDiv"></div> -->
                     </div>
                 </div>
